@@ -19,6 +19,9 @@
             border-bottom: 2px solid #eaecef;
             padding-bottom: 10px;
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         /* Details-Element als Container für die Gruppen */
         .group-container {
@@ -81,20 +84,22 @@
         .pdf-link:hover {
             text-decoration: underline;
         }
-        /* Styling für das Download-Bild */
-        .btn-download-img {
-            display: block;
-            width: 24px;  /* Gewünschte Breite des Icons */
-            height: auto;
+        /* Styling für den Emoji-Download-Button */
+        .btn-download-emoji {
+            text-decoration: none;
+            font-size: 1.4em;
+            line-height: 1;
+            display: inline-block;
             transition: transform 0.1s ease;
         }
-        .btn-download-img:hover {
-            transform: scale(1.1); /* Kleiner Hover-Effekt für das Bild */
+        .btn-download-emoji:hover {
+            transform: scale(1.2); /* Kleiner Vergrößerungseffekt beim Hovern */
         }
     </style>
 </head>
 <body>
 
+    <!-- Hauptüberschrift mit klassischem Emoji -->
     <h1>📄 SFT - Verfügbare PDF-Dokumente</h1>
 
     <!-- GRUPPE 1: VM-DATEIEN -->
@@ -105,17 +110,13 @@
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">2027 VM Teilnehmer</a>
                 </div>
-                <a href="2027_VM_Teilnehmer.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2027_VM_Teilnehmer.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">2027 VM Ausschreibung</a>
                 </div>
-                <a href="2027_VM_Ausschreibung.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2027_VM_Ausschreibung.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
         </ul>
     </details>
@@ -134,46 +135,36 @@
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">2026 U10 Ausschreibung</a>
                 </div>
-                <a href="2026_U10_Ausschreibung.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2026_U10_Ausschreibung.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2026_U10_Teilnehmer.pdf" target="_blank">2026 U10 Teilnehmer</a>
                 </div>
-                <a href="2026_U10_Teilnehmer.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2026_U10_Teilnehmer.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">2026 U10 Endstand</a>
                 </div>
-                <a href="2026_U10_Endstand.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2026_U10_Endstand.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">2026 U10 Endstand Crosstable</a>
                 </div>
-                <a href="2026_U10_Endstand_Crosstable.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2026_U10_Endstand_Crosstable.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">2026 U10 Endstand Kategorien</a>
                 </div>
-                <a href="2026_U10_Endstand_Kategorien.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="2026_U10_Endstand_Kategorien.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
         </ul>
     </details>
 
-    <!-- GRUPPE 2: ÜBRIGE DATEIEN (U10 & Jugend) -->
+    <!-- GRUPPE 2: ÜBRIGE DATEIEN -->
     <details class="group-container">
         <summary class="group-title">Historie</summary>
         <ul class="pdf-list">
@@ -181,25 +172,19 @@
                 <div class="link-wrapper">
                     <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">BYDJEMs</a>
                 </div>
-                <a href="BYDJEMs.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="BYDJEMs.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="BYVMs.pdf" target="_blank">BYVMs</a>
                 </div>
-                <a href="BYVMs.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="BYVMs.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
                     <a class="pdf-link" href="DVMs.pdf" target="_blank">DVMs</a>
                 </div>
-                <a href="DVMs.pdf" download>
-                    <img src="download-icon.png" alt="Download" class="btn-download-img">
-                </a>
+                <a href="DVMs.pdf" download class="btn-download-emoji" title="PDF herunterladen">📄</a>
             </li>
         </ul>
     </details>

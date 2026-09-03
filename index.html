@@ -23,10 +23,16 @@
             align-items: center;
             gap: 12px;
         }
-        /* Logo in der Hauptüberschrift */
+        /* Logo in der Hauptüberschrift (links) */
         .h1-logo {
             width: 32px;
             height: auto;
+        }
+        /* Neues Vereinslogo (rechtsbündig) */
+        .h1-logo-sft {
+            width: auto;
+            height: 40px; /* Feste Höhe, damit es optisch zur Zeile passt */
+            margin-left: auto; /* Schiebt das Logo nach ganz rechts */
         }
         /* Details-Element als Container für die Gruppen */
         .group-container {
@@ -105,7 +111,8 @@
 
     <!-- Hauptüberschrift mit dem Sumatra PDF Logo -->
     <h1>
-        SFT - Dokumente
+        <span>SFT - Dokumente</span>
+        <img src="Logo-SFT.png" alt="SFT Logo" class="h1-logo-sft">
     </h1>
 
     <!-- GRUPPE 1: VM-DATEIEN -->

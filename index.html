@@ -18,26 +18,49 @@
             color: #24292e;
             border-bottom: 2px solid #eaecef;
             padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .group-container {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .group-title {
+            font-size: 1.3em;
+            color: #24292e;
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eff1f3;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .pdf-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         .pdf-item {
-            background: white;
-            margin: 10px 0;
-            padding: 15px;
+            background: #fafbfc;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border: 1px solid #e1e4e8;
             border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        .pdf-item:hover {
+            background: #f6f8fa;
         }
         .pdf-link {
             color: #0366d6;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
         }
         .pdf-link:hover {
             text-decoration: underline;
@@ -59,50 +82,60 @@
 <body>
 
     <h1>📄 SFT - Verfügbare PDF-Dokumente</h1>
-    <p>Klicke auf den Namen, um die Datei im Browser anzuzeigen, oder nutze den Download-Button.</p>
 
-    <ul class="pdf-list">
-        <li class="pdf-item">
-            <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">2027 VM Teilnehmer</a>
-            <a class="btn-download" href="2027_VM_Teilnehmer.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">2027 VM Ausschreibung</a>
-            <a class="btn-download" href="2027_VM_Ausschreibung.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2026_U10_Teilnehmer.pdf" target="_blank">2026 U10 Teilnehmer</a>
-            <a class="btn-download" href="2026_U10_Teilnehmer.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">2026 U10 Endstand</a>
-            <a class="btn-download" href="2026_U10_Endstand.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">2026 U10 Endstand (Kreuztabelle)</a>
-            <a class="btn-download" href="2026_U10_Endstand_Crosstable.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">2026 U10 Endstand (Kategorien)</a>
-            <a class="btn-download" href="2026_U10_Endstand_Kategorien.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">2026 U10 Ausschreibung</a>
-            <a class="btn-download" href="2026_U10_Ausschreibung.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">BYDJEMs</a>
-            <a class="btn-download" href="BYDJEMs.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="BYVMs.pdf" target="_blank">BYVMs</a>
-            <a class="btn-download" href="BYVMs.pdf" download>Download</a>
-        </li>
-        <li class="pdf-item">
-            <a class="pdf-link" href="DVMs.pdf" target="_blank">DVMs</a>
-            <a class="btn-download" href="DVMs.pdf" download>Download</a>
-        </li>
-    </ul>
+    <!-- GRUPPE 1: VM-DATEIEN -->
+    <div class="group-container">
+        <h2 class="group-title">Vereinsmeisterschaften</h2>
+        <ul class="pdf-list">
+            <li class="pdf-item">
+                <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">2027 VM Teilnehmer</a>
+                <a class="btn-download" href="2027_VM_Teilnehmer.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">2027 VM Ausschreibung</a>
+                <a class="btn-download" href="2027_VM_Ausschreibung.pdf" download>Download</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- GRUPPE 2: ÜBRIGE DATEIEN (U10 & Jugend) -->
+    <div class="group-container">
+        <h2 class="group-title">📂 Weitere Dokumente & Jugend</h2>
+        <ul class="pdf-list">
+            <li class="pdf-item">
+                <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">2026 U10 Ausschreibung</a>
+                <a class="btn-download" href="2026_U10_Ausschreibung.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="2026_U10_Teilnehmer.pdf" target="_blank">2026 U10 Teilnehmer</a>
+                <a class="btn-download" href="2026_U10_Teilnehmer.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">2026 U10 Endstand</a>
+                <a class="btn-download" href="2026_U10_Endstand.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">2026 U10 Endstand Crosstable</a>
+                <a class="btn-download" href="2026_U10_Endstand_Crosstable.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">2026 U10 Endstand Kategorien</a>
+                <a class="btn-download" href="2026_U10_Endstand_Kategorien.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">BYDJEMs</a>
+                <a class="btn-download" href="BYDJEMs.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="BYVMs.pdf" target="_blank">BYVMs</a>
+                <a class="btn-download" href="BYVMs.pdf" download>Download</a>
+            </li>
+            <li class="pdf-item">
+                <a class="pdf-link" href="DVMs.pdf" target="_blank">DVMs</a>
+                <a class="btn-download" href="DVMs.pdf" download>Download</a>
+            </li>
+        </ul>
+    </div>
 
 </body>
 </html>

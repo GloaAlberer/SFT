@@ -20,24 +20,35 @@
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
+        /* Details-Element als Container für die Gruppen */
         .group-container {
             background: #fff;
             border: 1px solid #e1e4e8;
             border-radius: 6px;
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
         }
+        /* Summary fungiert als anklickbare Überschrift */
         .group-title {
             font-size: 1.3em;
             color: #24292e;
+            font-weight: bold;
+            padding: 15px 20px;
+            background: #fff;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+        .group-title:hover {
+            background: #f6f8fa;
+        }
+        /* Abstand für die Liste, wenn die Gruppe geöffnet ist */
+        .group-container[open] .pdf-list {
+            padding: 0 20px 20px 20px;
+            border-top: 1px solid #eff1f3;
             margin-top: 0;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #eff1f3;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         .pdf-list {
             list-style: none;
@@ -62,12 +73,6 @@
             align-items: center;
             gap: 10px;
         }
-        .pdf-icon {
-            width: 20px;
-            height: 20px;
-            fill: #d9381e; /* PDF-Rot */
-            flex-shrink: 0;
-        }
         .pdf-link {
             color: #0366d6;
             text-decoration: none;
@@ -76,17 +81,15 @@
         .pdf-link:hover {
             text-decoration: underline;
         }
-        .btn-download {
-            background-color: #2ea44f;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
+        /* Styling für das Download-Bild */
+        .btn-download-img {
+            display: block;
+            width: 24px;  /* Gewünschte Breite des Icons */
+            height: auto;
+            transition: transform 0.1s ease;
         }
-        .btn-download:hover {
-            background-color: #2c974b;
+        .btn-download-img:hover {
+            transform: scale(1.1); /* Kleiner Hover-Effekt für das Bild */
         }
     </style>
 </head>
@@ -94,108 +97,112 @@
 
     <h1>📄 SFT - Verfügbare PDF-Dokumente</h1>
 
-    <!-- SVG PDF Icon Template -->
-    <svg style="display: none;">
-        <g id="icon-pdf">
-            <path d="M12 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 5V3.5L18.5 7H14zM6 20V4h7v4h4v12H6zm3.5-7h1c.8 0 1.5.7 1.5 1.5v1c0 .8-.7 1.5-1.5 1.5h-1V18H8v-5h1.5zm0 3h1c.3 0 .5-.2.5-.5v-1c0-.3-.2-.5-.5-.5h-1v2zm7.5-3h-2v5h1.5v-1.5h.5c.6 0 1.1-.5 1.1-1.1v-1.3c0-.6-.5-1.1-1.1-1.1zm-.5 2.5v-1h.5c.3 0 .5.2.5.5v.1c0 .3-.2.4-.5.4h-.5zm-4.5-2.5H11v5h1.5v-1.5h.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5zm0 2.5v-1c0-.3.2-.5.5-.5h.5c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5h-.5c-.3 0-.5-.2-.5-.5z"/>
-        </g>
-    </svg>
-
     <!-- GRUPPE 1: VM-DATEIEN -->
-    <div class="group-container">
-        <h2 class="group-title">Vereinsmeisterschaften</h2>
+    <details class="group-container" open>
+        <summary class="group-title">Vereinsmeisterschaften</summary>
         <ul class="pdf-list">
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">2027 VM Teilnehmer</a>
                 </div>
-                <a class="btn-download" href="2027_VM_Teilnehmer.pdf" download>Download</a>
+                <a href="2027_VM_Teilnehmer.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">2027 VM Ausschreibung</a>
                 </div>
-                <a class="btn-download" href="2027_VM_Ausschreibung.pdf" download>Download</a>
+                <a href="2027_VM_Ausschreibung.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
         </ul>
-    </div>
+    </details>
 
-    <div class="group-container">
-        <h2 class="group-title">Sun 8×8 Cup</h2>
+    <details class="group-container">
+        <summary class="group-title">Sun 8×8 Cup</summary>
         <ul class="pdf-list">
+            <!-- Keine Dateien vorhanden -->
         </ul>
-    </div>
+    </details>
 
-    <div class="group-container">
-        <h2 class="group-title">U10 Diamant-Cup</h2>
+    <details class="group-container">
+        <summary class="group-title">U10 Diamant-Cup</summary>
         <ul class="pdf-list">
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">2026 U10 Ausschreibung</a>
                 </div>
-                <a class="btn-download" href="2026_U10_Ausschreibung.pdf" download>Download</a>
+                <a href="2026_U10_Ausschreibung.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2026_U10_Teilnehmer.pdf" target="_blank">2026 U10 Teilnehmer</a>
                 </div>
-                <a class="btn-download" href="2026_U10_Teilnehmer.pdf" download>Download</a>
+                <a href="2026_U10_Teilnehmer.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">2026 U10 Endstand</a>
                 </div>
-                <a class="btn-download" href="2026_U10_Endstand.pdf" download>Download</a>
+                <a href="2026_U10_Endstand.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">2026 U10 Endstand Crosstable</a>
                 </div>
-                <a class="btn-download" href="2026_U10_Endstand_Crosstable.pdf" download>Download</a>
+                <a href="2026_U10_Endstand_Crosstable.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">2026 U10 Endstand Kategorien</a>
                 </div>
-                <a class="btn-download" href="2026_U10_Endstand_Kategorien.pdf" download>Download</a>
+                <a href="2026_U10_Endstand_Kategorien.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
         </ul>
-    </div>
+    </details>
 
     <!-- GRUPPE 2: ÜBRIGE DATEIEN (U10 & Jugend) -->
-    <div class="group-container">
-        <h2 class="group-title">Historie</h2>
+    <details class="group-container">
+        <summary class="group-title">Historie</summary>
         <ul class="pdf-list">
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">BYDJEMs</a>
                 </div>
-                <a class="btn-download" href="BYDJEMs.pdf" download>Download</a>
+                <a href="BYDJEMs.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="BYVMs.pdf" target="_blank">BYVMs</a>
                 </div>
-                <a class="btn-download" href="BYVMs.pdf" download>Download</a>
+                <a href="BYVMs.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
             <li class="pdf-item">
                 <div class="link-wrapper">
-                    <svg class="pdf-icon"><use xlink:href="#icon-pdf"/></svg>
                     <a class="pdf-link" href="DVMs.pdf" target="_blank">DVMs</a>
                 </div>
-                <a class="btn-download" href="DVMs.pdf" download>Download</a>
+                <a href="DVMs.pdf" download>
+                    <img src="download-icon.png" alt="Download" class="btn-download-img">
+                </a>
             </li>
         </ul>
-    </div>
+    </details>
 
 </body>
 </html>

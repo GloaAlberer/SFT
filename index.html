@@ -107,18 +107,16 @@
             border: 1px solid #e1e4e8;
             border-radius: 6px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
         .pdf-item:hover {
             background: #f6f8fa;
         }
-        .link-wrapper {
+        .pdf-link {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        .pdf-link {
+            width: 100%;
             color: #0366d6;
             text-decoration: none;
             font-weight: bold;
@@ -126,15 +124,12 @@
         .pdf-link:hover {
             text-decoration: underline;
         }
-        /* Styling für das Sumatra-Download-Logo */
-        .btn-download-logo {
+        /* PDF-Icon vor dem Dateinamen */
+        .pdf-icon {
             display: block;
-            width: 24px;  /* Gewünschte Breite des Buttons */
+            width: 24px;
             height: auto;
-            transition: transform 0.1s ease;
-        }
-        .btn-download-logo:hover {
-            transform: scale(1.1); /* Kleiner Vergrößerungseffekt beim Hovern */
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -154,43 +149,33 @@
                 <summary class="year-title">2027</summary>
                 <ul class="pdf-list">
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2027_VM_Herbst_Endstand.pdf" target="_blank">2027 Herbst Endstand</a>
-                        </div>
-                        <a href="2027_VM_Herbst_Endstand.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2027_VM_Herbst_Endstand.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2027 Herbst Endstand</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2027_VM_Herbst_Kategorien.pdf" target="_blank">2027 Herbst (Kategorien)</a>
-                        </div>
-                        <a href="2027_VM_Herbst_Kategorien.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2027_VM_Herbst_Kategorien.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2027 Herbst (Kategorien)</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2027_VM_Herbst_Kreuztabelle.pdf" target="_blank">2027 Herbst (Kreuztabelle)</a>
-                        </div>
-                        <a href="2027_VM_Herbst_Kreuztabelle.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2027_VM_Herbst_Kreuztabelle.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2027 Herbst (Kreuztabelle)</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">2027 Ausschreibung</a>
-                        </div>
-                        <a href="2027_VM_Ausschreibung.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2027_VM_Ausschreibung.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2027 Ausschreibung</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">2027 Teilnehmer</a>
-                        </div>
-                        <a href="2027_VM_Teilnehmer.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2027_VM_Teilnehmer.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2027 Teilnehmer</span>
                         </a>
                     </li>
                 </ul>
@@ -199,27 +184,21 @@
                 <summary class="year-title">2026</summary>
                 <ul class="pdf-list">
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_VM_Endstand.pdf" target="_blank">2026 Endstand</a>
-                        </div>
-                        <a href="2026_VM_Endstand.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_VM_Endstand.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_VM_Endstand_Kategorien.pdf" target="_blank">2026 Endstand (Kategorien)</a>
-                        </div>
-                        <a href="2026_VM_Endstand_Kategorien.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_VM_Endstand_Kategorien.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kategorien)</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_VM_Endstand_Crosstable.pdf" target="_blank">2026 Endstand (Kreuztabelle)</a>
-                        </div>
-                        <a href="2026_VM_Endstand_Crosstable.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_VM_Endstand_Crosstable.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kreuztabelle)</span>
                         </a>
                     </li>
                 </ul>
@@ -234,19 +213,56 @@
                 <summary class="year-title">2026</summary>
                 <ul class="pdf-list">
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Wolfgang_Fischer_Ausschreibung.pdf" target="_blank">2026 Auschreibung</a>
-                        </div>
-                        <a href="2026_Wolfgang_Fischer_Ausschreibung.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Wolfgang_Fischer_Ausschreibung.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Auschreibung</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Wolfgang_Fischer_Teilnehmer.pdf" target="_blank">2026 Teilnehmer</a>
-                        </div>
-                        <a href="2026_Wolfgang_Fischer_Teilnehmer.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Wolfgang_Fischer_Teilnehmer.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Teilnehmer</span>
+                        </a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </details>
+
+    <!-- NEU: JUGENDTURNIER -->
+    <details class="group-container">
+        <summary class="group-title">Jugendturnier</summary>
+        <div class="year-list">
+            <details class="year-container" open>
+                <summary class="year-title">2026/ 2027</summary>
+                <ul class="pdf-list">
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="2026_2027TeilnehmerA1" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Teilnehmer A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="2026_2027TeilnehmerA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Teilnehmer A2</span>
+                        </a>
+                    </li>
+                </ul>
+            </details>
+            <details class="year-container">
+                <summary class="year-title">2025/ 2026</summary>
+                <ul class="pdf-list">
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20260702EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Endstand A1 2. Juli</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20260702EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Endstand A2 2. Juli</span>
                         </a>
                     </li>
                 </ul>
@@ -261,59 +277,45 @@
                 <summary class="year-title">2026</summary>
                 <ul class="pdf-list">
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Ergebnis_1.pdf" target="_blank">2026 Ergebnis 6. August</a>
-                        </div>
-                        <a href="2026_Sun8x8_Ergebnis_1.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Ergebnis_1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Ergebnis 6. August</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Ergebnis_2.pdf" target="_blank">2026 Ergebnis 20. August</a>
-                        </div>
-                        <a href="2026_Sun8x8_Ergebnis_2.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Ergebnis_2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Ergebnis 20. August</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Ergebnis_3.pdf" target="_blank">2026 Ergebnis 27. August</a>
-                        </div>
-                        <a href="2026_Sun8x8_Ergebnis_3.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Ergebnis_3.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Ergebnis 27. August</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Ergebnis_4.pdf" target="_blank">2026 Ergebnis 10. September</a>
-                        </div>
-                        <a href="2026_Sun8x8_Ergebnis_4.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Ergebnis_4.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Ergebnis 10. September</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Endstand.pdf" target="_blank">2026 Endstand</a>
-                        </div>
-                        <a href="2026_Sun8x8_Endstand.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Endstand.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Endstand_Kategorien.pdf" target="_blank">2026 Endstand (Kategorien)</a>
-                        </div>
-                        <a href="2026_Sun8x8_Endstand_Kategorien.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Endstand_Kategorien.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kategorien)</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_Sun8x8_Endstand_Kreuztabelle.pdf" target="_blank">2026 Endstand (Kreuztabelle)</a>
-                        </div>
-                        <a href="2026_Sun8x8_Endstand_Kreuztabelle.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_Sun8x8_Endstand_Kreuztabelle.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kreuztabelle)</span>
                         </a>
                     </li>
                 </ul>
@@ -328,35 +330,27 @@
                 <summary class="year-title">2026</summary>
                 <ul class="pdf-list">
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">2026 Ausschreibung</a>
-                        </div>
-                        <a href="2026_U10_Ausschreibung.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_U10_Ausschreibung.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Ausschreibung</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">2026 Endstand</a>
-                        </div>
-                        <a href="2026_U10_Endstand.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_U10_Endstand.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">2026 Endstand (Kategorien)</a>
-                        </div>
-                        <a href="2026_U10_Endstand_Kategorien.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_U10_Endstand_Kategorien.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kategorien)</span>
                         </a>
                     </li>
                     <li class="pdf-item">
-                        <div class="link-wrapper">
-                            <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">2026 Endstand (Kreuztabelle)</a>
-                        </div>
-                        <a href="2026_U10_Endstand_Crosstable.pdf" download>
-                            <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
+                        <a class="pdf-link" href="2026_U10_Endstand_Crosstable.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>2026 Endstand (Kreuztabelle)</span>
                         </a>
                     </li>
                 </ul>
@@ -369,29 +363,23 @@
         <summary class="group-title">Historie</summary>
         <ul class="pdf-list">
             <li class="pdf-item">
-                <div class="link-wrapper">
-                    <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">Bayerische &amp; Deutsche JEMs</a>
-                </div>
-                <a href="BYDJEMs.pdf" download>
-                    <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
-                </a>
-            </li>
+                        <a class="pdf-link" href="BYDJEMs.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Bayerische &amp; Deutsche JEMs</span>
+                        </a>
+                    </li>
             <li class="pdf-item">
-                <div class="link-wrapper">
-                    <a class="pdf-link" href="BYVMs.pdf" target="_blank">Bayerische VMs</a>
-                </div>
-                <a href="BYVMs.pdf" download>
-                    <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
-                </a>
-            </li>
+                        <a class="pdf-link" href="BYVMs.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Bayerische VMs</span>
+                        </a>
+                    </li>
             <li class="pdf-item">
-                <div class="link-wrapper">
-                    <a class="pdf-link" href="DVMs.pdf" target="_blank">Deutsche VMs</a>
-                </div>
-                <a href="DVMs.pdf" download>
-                    <img src="Sumatra_PDF_logo.png" alt="Download PDF" class="btn-download-logo" title="PDF herunterladen">
-                </a>
-            </li>
+                        <a class="pdf-link" href="DVMs.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Deutsche VMs</span>
+                        </a>
+                    </li>
         </ul>
     </details>
 

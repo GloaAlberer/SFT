@@ -485,6 +485,21 @@
                     </li>
         </ul>
     </details>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Generiert einen eindeutigen Zeitstempel (z.B. basierend auf der aktuellen Minute)
+    // / 60000 sorgt dafür, dass sich der Cache nur jede Minute erneuert, nicht jede Sekunde (schont Datenvolumen)
+    const version = Math.floor(Date.now() / 60000); 
 
+    // Findet alle Links auf der Seite
+    const links = document.querySelectorAll('a[href$=".pdf"]');
+    
+    links.forEach(function(link) {
+      // Hängt den Zeitstempel an die URL an
+      const currentHref = link.getAttribute('href');
+      link.setAttribute('href', currentHref + '?v=' + version);
+    });
+  });
+</script>
 </body>
 </html>

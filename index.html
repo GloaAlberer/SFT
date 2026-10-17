@@ -100,6 +100,20 @@
             padding: 0;
             margin: 0;
         }
+        /* Zweispaltige Liste: A1 links, A2 rechts */
+        .pdf-list.two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 12px;
+        }
+        .pdf-list.two-col .pdf-item {
+            min-width: 0;
+        }
+        @media (max-width: 560px) {
+            .pdf-list.two-col {
+                grid-template-columns: 1fr;
+            }
+        }
         .pdf-item {
             background: #fafbfc;
             margin: 8px 0;
@@ -235,7 +249,7 @@
         <div class="year-list">
             <details class="year-container" open>
                 <summary class="year-title">2026/ 2027</summary>
-                <ul class="pdf-list">
+                <ul class="pdf-list two-col">
                     <li class="pdf-item">
                         <a class="pdf-link" href="2026_2027TeilnehmerA1.pdf" target="_blank">
                             <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
@@ -248,11 +262,83 @@
                             <span>Teilnehmer A2</span>
                         </a>
                     </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20261022EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Opening A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20261022EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Opening A2</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20261210EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Weihnachten A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20261210EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Weihnachten A2</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270204EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Fasching A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270204EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Fasching A2</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270311EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Ostern A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270311EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Ostern A2</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270422EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Frühling A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270422EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Frühling A2</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270603EndstandA1.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Finale A1</span>
+                        </a>
+                    </li>
+                    <li class="pdf-item">
+                        <a class="pdf-link" href="20270603EndstandA2.pdf" target="_blank">
+                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                            <span>Ergebnis Finale A2</span>
+                        </a>
+                    </li>
                 </ul>
             </details>
             <details class="year-container">
                 <summary class="year-title">2025/ 2026</summary>
-                <ul class="pdf-list">
+                <ul class="pdf-list two-col">
                     <li class="pdf-item">
                         <a class="pdf-link" href="20260702EndstandA1.pdf" target="_blank">
                             <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">

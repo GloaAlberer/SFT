@@ -162,6 +162,49 @@
             height: auto;
             flex-shrink: 0;
         }
+
+        /* Turnier-Zeile: ein Icon, ein Name, dahinter Gesamt / A1 / A2 */
+        .pdf-item.event {
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .event-name {
+            flex: 1 1 140px;
+            font-weight: bold;
+            color: #24292e;
+        }
+        .event-links {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .event-links a {
+            display: inline-block;
+            min-width: 58px;
+            text-align: center;
+            padding: 2px 12px;
+            border: 1px solid #c8d1db;
+            border-radius: 999px;
+            background: #fff;
+            color: #0366d6;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .event-links a:hover {
+            background: #eef6ff;
+            border-color: #0366d6;
+        }
+        .pdf-item.event.disabled .event-name {
+            color: #6a737d;
+        }
+        .pdf-item.event.disabled .event-links a {
+            color: #6a737d;
+            background: transparent;
+            border-color: #d0d4d9;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
@@ -274,78 +317,60 @@
                         </a>
                     </li>
                 </ul>
-                    <ul class="pdf-list two-col">
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20261022EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Opening A1</span>
-                        </a>
+                <ul class="pdf-list">
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Opening</span>
+                        <span class="event-links">
+                            <a href="20261022Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20261022EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20261022EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20261022EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Opening A2</span>
-                        </a>
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Weihnachten</span>
+                        <span class="event-links">
+                            <a href="20261210Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20261210EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20261210EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20261210EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Weihnachten A1</span>
-                        </a>
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Fasching</span>
+                        <span class="event-links">
+                            <a href="20270204Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20270204EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20270204EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20261210EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Weihnachten A2</span>
-                        </a>
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Ostern</span>
+                        <span class="event-links">
+                            <a href="20270311Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20270311EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20270311EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270204EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Fasching A1</span>
-                        </a>
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Frühling</span>
+                        <span class="event-links">
+                            <a href="20270422Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20270422EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20270422EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270204EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Fasching A2</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270311EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Ostern A1</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270311EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Ostern A2</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270422EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Frühling A1</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270422EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Frühling A2</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270603EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Finale A1</span>
-                        </a>
-                    </li>
-                    <li class="pdf-item disabled">
-                        <a class="pdf-link" href="20270603EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">
-                            <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
-                            <span>Ergebnis Finale A2</span>
-                        </a>
+                    <li class="pdf-item event disabled">
+                        <img src="Sumatra_PDF_logo.png" alt="PDF" class="pdf-icon">
+                        <span class="event-name">Ergebnis Finale</span>
+                        <span class="event-links">
+                            <a href="20270603Endstand.pdf" target="_blank" aria-disabled="true" tabindex="-1">Gesamt</a>
+                            <a href="20270603EndstandA1.pdf" target="_blank" aria-disabled="true" tabindex="-1">A1</a>
+                            <a href="20270603EndstandA2.pdf" target="_blank" aria-disabled="true" tabindex="-1">A2</a>
+                        </span>
                     </li>
                 </ul>
             </details>

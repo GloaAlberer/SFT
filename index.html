@@ -175,8 +175,9 @@
         }
         .event-links {
             display: flex;
+            flex-wrap: wrap;
             gap: 6px;
-            flex-shrink: 0;
+            min-width: 0;
         }
         .event-links a {
             display: inline-block;
@@ -194,6 +195,21 @@
         .event-links a:hover {
             background: #eef6ff;
             border-color: #0366d6;
+        }
+        /* Smartphone: Name neben dem Icon, Pillen darunter über die volle Breite */
+        @media (max-width: 560px) {
+            .event-name {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+            .event-links {
+                flex: 1 1 100%;
+            }
+            .event-links a {
+                flex: 1 1 0;
+                min-width: 56px;
+                padding: 4px 8px;
+            }
         }
         .pdf-item.event.disabled .event-name {
             color: #6a737d;

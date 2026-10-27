@@ -220,6 +220,31 @@
             pointer-events: none;
             cursor: not-allowed;
         }
+
+        /* Dezenter Link zur Bilderübersicht (Fotowettbewerb) */
+        .photo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: -10px 0 20px 0;
+            padding: 5px 14px 5px 11px;
+            border: 1px solid #c8d1db;
+            border-radius: 999px;
+            background: #fff;
+            color: #0366d6;
+            font-size: 0.95em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .photo-link:hover {
+            background: #eef6ff;
+            border-color: #0366d6;
+        }
+        .photo-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -229,6 +254,15 @@
         <span>Dokumente &amp; Ergebnisse</span>
         <img src="Logo-SFT.png" alt="SFT Logo" class="h1-logo-sft">
     </h1>
+
+    <!-- Link zur Bilderübersicht des Fotowettbewerbs -->
+    <a class="photo-link" href="Bilderuebersicht.html" target="_blank">
+        <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+        </svg>
+        <span>Fotowettbewerb 2026 &ndash; Bildübersicht</span>
+    </a>
 
     <!-- GRUPPE 1: VM-DATEIEN -->
     <details class="group-container" >

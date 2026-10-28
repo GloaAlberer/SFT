@@ -51,21 +51,10 @@
             border-radius: 6px;
             display: flex;
             align-items: center;
+            gap: 15px;
         }
         .pdf-item:hover {
             background: #f6f8fa;
-        }
-        .pdf-link {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .pdf-link:hover .photo-title {
-            text-decoration: underline;
         }
         /* Vorschaubild statt PDF-Icon */
         .thumb {
@@ -78,7 +67,12 @@
             border-radius: 4px;
             background: #f6f8fa;
         }
-        .pdf-link:hover .thumb {
+        .thumb-link {
+            display: block;
+            flex-shrink: 0;
+            line-height: 0;
+        }
+        .thumb-link:hover .thumb {
             border-color: #0366d6;
         }
         .photo-text {
@@ -87,6 +81,8 @@
             min-width: 0;
         }
         .photo-title {
+            color: #24292e;
+            font-weight: bold;
             overflow-wrap: anywhere;
         }
         .photo-meta {
@@ -106,409 +102,319 @@
     <div class="group-container">
         <ul class="pdf-list">
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/1.png" target="_blank">
-                        <img src="images/1.png" alt="Vorschau Bild 1" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/1.png" target="_blank"><img src="images/1.png" alt="Vorschau Bild 1" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Drei Generationen am Brett im Oskar in Bayreuth</span>
                             <span class="photo-meta">Bild 1 &middot; Agnes K. mit Neffe Vitus und Mutter Agnes F. Kumpfmüller</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/2.png" target="_blank">
-                        <img src="images/2.png" alt="Vorschau Bild 2" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/2.png" target="_blank"><img src="images/2.png" alt="Vorschau Bild 2" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Die kneippschen Schachfreunden am grünen Hügel in Bayreuth</span>
                             <span class="photo-meta">Bild 2 &middot; Agnes K. Kumpfmüller</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/3.png" target="_blank">
-                        <img src="images/3.png" alt="Vorschau Bild 3" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/3.png" target="_blank"><img src="images/3.png" alt="Vorschau Bild 3" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Gretas Schachbrett auf Reisen - mit Zugspitzblick</span>
                             <span class="photo-meta">Bild 3 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/4.png" target="_blank">
-                        <img src="images/4.png" alt="Vorschau Bild 4" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/4.png" target="_blank"><img src="images/4.png" alt="Vorschau Bild 4" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Gretas Schachbrett auf Reisen: An der Partnach</span>
                             <span class="photo-meta">Bild 4 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/5.png" target="_blank">
-                        <img src="images/5.png" alt="Vorschau Bild 5" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/5.png" target="_blank"><img src="images/5.png" alt="Vorschau Bild 5" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Gretas Schachbrett auf Reisen: Beim Eckbauer mit Blick aufs Wettersteingebirge (kurz vor am Wedda)</span>
                             <span class="photo-meta">Bild 5 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/6.png" target="_blank">
-                        <img src="images/6.png" alt="Vorschau Bild 6" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/6.png" target="_blank"><img src="images/6.png" alt="Vorschau Bild 6" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Gretas Schachbrett auf Reisen: Kuhfluchtwasserfälle</span>
                             <span class="photo-meta">Bild 6 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/7.png" target="_blank">
-                        <img src="images/7.png" alt="Vorschau Bild 7" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/7.png" target="_blank"><img src="images/7.png" alt="Vorschau Bild 7" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">ZweiVorstandsDAMEN (Kassier Görlich und Vorstand Fischer) in Italien</span>
                             <span class="photo-meta">Bild 7 &middot; Brunhilde Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/8.png" target="_blank">
-                        <img src="images/8.png" alt="Vorschau Bild 8" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/8.png" target="_blank"><img src="images/8.png" alt="Vorschau Bild 8" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Freundschaftsspiel in Lissabon</span>
                             <span class="photo-meta">Bild 8 &middot; Michael A. Achhammer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/9.png" target="_blank">
-                        <img src="images/9.png" alt="Vorschau Bild 9" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/9.png" target="_blank"><img src="images/9.png" alt="Vorschau Bild 9" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Herausforderung am Tejo</span>
                             <span class="photo-meta">Bild 9 &middot; Michael A. Achhammer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/10.png" target="_blank">
-                        <img src="images/10.png" alt="Vorschau Bild 10" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/10.png" target="_blank"><img src="images/10.png" alt="Vorschau Bild 10" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Rasenschach bei Benfica</span>
                             <span class="photo-meta">Bild 10 &middot; Michael A. Achhammer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/11.png" target="_blank">
-                        <img src="images/11.png" alt="Vorschau Bild 11" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/11.png" target="_blank"><img src="images/11.png" alt="Vorschau Bild 11" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Abkühlung</span>
                             <span class="photo-meta">Bild 11 &middot; Brunhilde Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/12.png" target="_blank">
-                        <img src="images/12.png" alt="Vorschau Bild 12" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/12.png" target="_blank"><img src="images/12.png" alt="Vorschau Bild 12" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Feierabend im Chiemgau</span>
                             <span class="photo-meta">Bild 12 &middot; Brunhilde Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/13.png" target="_blank">
-                        <img src="images/13.png" alt="Vorschau Bild 13" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/13.png" target="_blank"><img src="images/13.png" alt="Vorschau Bild 13" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Aufm Reiflinger See</span>
                             <span class="photo-meta">Bild 13 &middot; Vitus Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/14.png" target="_blank">
-                        <img src="images/14.png" alt="Vorschau Bild 14" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/14.png" target="_blank"><img src="images/14.png" alt="Vorschau Bild 14" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Morra mit unserer lieben Frau von Kunterweg</span>
                             <span class="photo-meta">Bild 14 &middot; Stephan Bernauer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/15.png" target="_blank">
-                        <img src="images/15.png" alt="Vorschau Bild 15" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/15.png" target="_blank"><img src="images/15.png" alt="Vorschau Bild 15" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Alte Blaueishütte</span>
                             <span class="photo-meta">Bild 15 &middot; Lorenz Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/16.png" target="_blank">
-                        <img src="images/16.png" alt="Vorschau Bild 16" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/16.png" target="_blank"><img src="images/16.png" alt="Vorschau Bild 16" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Bergsteigerdorf Ramsau</span>
                             <span class="photo-meta">Bild 16 &middot; Stephan Bernauer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/17.png" target="_blank">
-                        <img src="images/17.png" alt="Vorschau Bild 17" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/17.png" target="_blank"><img src="images/17.png" alt="Vorschau Bild 17" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Endspieltraining auf&#x27;m Blaueisgletscher</span>
                             <span class="photo-meta">Bild 17 &middot; Stephan Bernauer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/18.png" target="_blank">
-                        <img src="images/18.png" alt="Vorschau Bild 18" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/18.png" target="_blank"><img src="images/18.png" alt="Vorschau Bild 18" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">„Wenn das Reiseschachbrett nicht in den Koffer passt...“</span>
                             <span class="photo-meta">Bild 18 &middot; Gabriel Wesolowski</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/19.png" target="_blank">
-                        <img src="images/19.png" alt="Vorschau Bild 19" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/19.png" target="_blank"><img src="images/19.png" alt="Vorschau Bild 19" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Sonnenuntergang am Chiemsee</span>
                             <span class="photo-meta">Bild 19 &middot; Vitus Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/20.png" target="_blank">
-                        <img src="images/20.png" alt="Vorschau Bild 20" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/20.png" target="_blank"><img src="images/20.png" alt="Vorschau Bild 20" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Schach Matt Opa</span>
                             <span class="photo-meta">Bild 20 &middot; Familie Thomas Thomas</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/21.png" target="_blank">
-                        <img src="images/21.png" alt="Vorschau Bild 21" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/21.png" target="_blank"><img src="images/21.png" alt="Vorschau Bild 21" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Sharing chess time with little brother</span>
                             <span class="photo-meta">Bild 21 &middot; Familie Thomas Thomas</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/22.png" target="_blank">
-                        <img src="images/22.png" alt="Vorschau Bild 22" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/22.png" target="_blank"><img src="images/22.png" alt="Vorschau Bild 22" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Learn Chess as early as 2!!</span>
                             <span class="photo-meta">Bild 22 &middot; Familie Thomas Thomas</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/23.png" target="_blank">
-                        <img src="images/23.png" alt="Vorschau Bild 23" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/23.png" target="_blank"><img src="images/23.png" alt="Vorschau Bild 23" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Der letzte Zug vor Sonnenuntergang</span>
                             <span class="photo-meta">Bild 23 &middot; Mia / Daniel Rauscher</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/24.png" target="_blank">
-                        <img src="images/24.png" alt="Vorschau Bild 24" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/24.png" target="_blank"><img src="images/24.png" alt="Vorschau Bild 24" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Schachfreundinnen beim Vereinsausflug im Höllbachtal</span>
                             <span class="photo-meta">Bild 24 &middot; SFT Damenmannschaft</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/25.png" target="_blank">
-                        <img src="images/25.png" alt="Vorschau Bild 25" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/25.png" target="_blank"><img src="images/25.png" alt="Vorschau Bild 25" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">…keine Zeit zum Essen (Vereinsausflug, Röhrenhof, Rettenbach)</span>
                             <span class="photo-meta">Bild 25 &middot; Quirin Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/26.png" target="_blank">
-                        <img src="images/26.png" alt="Vorschau Bild 26" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/26.png" target="_blank"><img src="images/26.png" alt="Vorschau Bild 26" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Sabines Schachbrett on Tour: Teufelshöhle bei Pottenstein</span>
                             <span class="photo-meta">Bild 26 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/27.png" target="_blank">
-                        <img src="images/27.png" alt="Vorschau Bild 27" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/27.png" target="_blank"><img src="images/27.png" alt="Vorschau Bild 27" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Alpengambit</span>
                             <span class="photo-meta">Bild 27 &middot; Diana und Christian Lichtenegger</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/28.png" target="_blank">
-                        <img src="images/28.png" alt="Vorschau Bild 28" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/28.png" target="_blank"><img src="images/28.png" alt="Vorschau Bild 28" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Mei Dechaham - da sama dahoam</span>
                             <span class="photo-meta">Bild 28 &middot; Agnes Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/29.png" target="_blank">
-                        <img src="images/29.png" alt="Vorschau Bild 29" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/29.png" target="_blank"><img src="images/29.png" alt="Vorschau Bild 29" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">verzwickte Stellung</span>
                             <span class="photo-meta">Bild 29 &middot; Agnes Fischer</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/30.png" target="_blank">
-                        <img src="images/30.png" alt="Vorschau Bild 30" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/30.png" target="_blank"><img src="images/30.png" alt="Vorschau Bild 30" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Wikingerschach in Dänemark 1</span>
                             <span class="photo-meta">Bild 30 &middot; Michael und Jannis Städler</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/31.png" target="_blank">
-                        <img src="images/31.png" alt="Vorschau Bild 31" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/31.png" target="_blank"><img src="images/31.png" alt="Vorschau Bild 31" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Wikingerschach gelöscht</span>
                             <span class="photo-meta">Bild 31 &middot; Michael und Jannis Städler</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/32.png" target="_blank">
-                        <img src="images/32.png" alt="Vorschau Bild 32" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/32.png" target="_blank"><img src="images/32.png" alt="Vorschau Bild 32" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Wikingerschach gelöscht</span>
                             <span class="photo-meta">Bild 32 &middot; Michael und Jannis Städler</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/33.png" target="_blank">
-                        <img src="images/33.png" alt="Vorschau Bild 33" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/33.png" target="_blank"><img src="images/33.png" alt="Vorschau Bild 33" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Morgendämmerung in Neuburg an der Donau</span>
                             <span class="photo-meta">Bild 33 &middot; Sabine Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/34.png" target="_blank">
-                        <img src="images/34.png" alt="Vorschau Bild 34" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/34.png" target="_blank"><img src="images/34.png" alt="Vorschau Bild 34" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Augsburger Zoo</span>
                             <span class="photo-meta">Bild 34 &middot; Greta Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/35.png" target="_blank">
-                        <img src="images/35.png" alt="Vorschau Bild 35" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/35.png" target="_blank"><img src="images/35.png" alt="Vorschau Bild 35" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Sandschach</span>
                             <span class="photo-meta">Bild 35 &middot; Greta Hartl</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/36.png" target="_blank">
-                        <img src="images/36.png" alt="Vorschau Bild 36" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/36.png" target="_blank"><img src="images/36.png" alt="Vorschau Bild 36" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Dahoam is Dahoam</span>
                             <span class="photo-meta">Bild 36 &middot; Mark Mätz</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/37.png" target="_blank">
-                        <img src="images/37.png" alt="Vorschau Bild 37" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/37.png" target="_blank"><img src="images/37.png" alt="Vorschau Bild 37" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Steinschach</span>
                             <span class="photo-meta">Bild 37 &middot; Veronika Kaisin</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/38.png" target="_blank">
-                        <img src="images/38.png" alt="Vorschau Bild 38" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/38.png" target="_blank"><img src="images/38.png" alt="Vorschau Bild 38" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Italienisch auf Griechisch</span>
                             <span class="photo-meta">Bild 38 &middot; Clara Hälßig</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/39.png" target="_blank">
-                        <img src="images/39.png" alt="Vorschau Bild 39" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/39.png" target="_blank"><img src="images/39.png" alt="Vorschau Bild 39" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Schach am Abgrund</span>
                             <span class="photo-meta">Bild 39 &middot; Antonia und Sebastian Lubile</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/40.png" target="_blank">
-                        <img src="images/40.png" alt="Vorschau Bild 40" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/40.png" target="_blank"><img src="images/40.png" alt="Vorschau Bild 40" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">SONNENUNTERGANG ÜBER DEN DÄCHERN VON PORTO</span>
                             <span class="photo-meta">Bild 40 &middot; Michael und Nele Stockhecke</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/41.png" target="_blank">
-                        <img src="images/41.png" alt="Vorschau Bild 41" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/41.png" target="_blank"><img src="images/41.png" alt="Vorschau Bild 41" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">Schach am Strand (Tunesien)</span>
                             <span class="photo-meta">Bild 41 &middot; Adam Mahfoudh</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/42.png" target="_blank">
-                        <img src="images/42.png" alt="Vorschau Bild 42" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/42.png" target="_blank"><img src="images/42.png" alt="Vorschau Bild 42" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">&quot;Ein Spiel wie vor 600 Jahren&quot; Hallemann-Turm in Tallinn. &gt;&gt; Bild 2</span>
                             <span class="photo-meta">Bild 42 &middot; Raphael Roith</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/43.png" target="_blank">
-                        <img src="images/43.png" alt="Vorschau Bild 43" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/43.png" target="_blank"><img src="images/43.png" alt="Vorschau Bild 43" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">&quot;Ein Tag auf Pihlajasaari - Zum um Zug&quot; Insel Pihlajasaari / Helsinki / Finnland &gt;&gt; Bild 3</span>
                             <span class="photo-meta">Bild 43 &middot; Raphael Roith</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/44.png" target="_blank">
-                        <img src="images/44.png" alt="Vorschau Bild 44" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/44.png" target="_blank"><img src="images/44.png" alt="Vorschau Bild 44" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">&quot;Samstagabend in der Oodi&quot; Zentralbibliothek Oodi in Helsinki. Finnland.&gt;&gt; Bild 5</span>
                             <span class="photo-meta">Bild 44 &middot; Raphael Roith</span>
                         </span>
-                    </a>
                 </li>
                 <li class="pdf-item">
-                    <a class="pdf-link photo-item" href="images/45.png" target="_blank">
-                        <img src="images/45.png" alt="Vorschau Bild 45" class="thumb" loading="lazy">
-                        <span class="photo-text">
+                    <a class="thumb-link" href="images/45.png" target="_blank"><img src="images/45.png" alt="Vorschau Bild 45" class="thumb" loading="lazy"></a>
+                    <span class="photo-text">
                             <span class="photo-title">64 Felder wollen auch mal Urlaub</span>
                             <span class="photo-meta">Bild 45 &middot; Brassat Jürgen</span>
                         </span>
-                    </a>
                 </li>
         </ul>
     </div>
